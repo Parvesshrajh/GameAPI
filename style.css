@@ -1,0 +1,125 @@
+/* Pokémon Quiz Game Styles */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #333;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#pokemonImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    margin: 10px 0;
+    transition: all 0.3s ease;
+    background-color: #f0f0f0; /* Light background to show if image fails */
+}
+
+#pokemonImage:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+}
+
+#options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 10px 0;
+    max-width: 500px;
+}
+
+button {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-transform: capitalize;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ff8e53, #ff6b6b);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#result {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+    min-height: 20px;
+}
+
+#score {
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    margin-top: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    h2 {
+        font-size: 1.5em;
+    }
+
+    #pokemonImage {
+        width: 120px;
+        height: 120px;
+    }
+
+    #options {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        margin: 8px 0;
+    }
+
+    button {
+        padding: 8px 12px;
+        font-size: 12px;
+        border-radius: 3px;
+    }
+
+    #result {
+        font-size: 0.9em;
+        margin: 8px 0;
+    }
+
+    #score {
+        font-size: 0.9em;
+        margin-top: 8px;
+    }
+}
